@@ -1,0 +1,102 @@
+body {
+   width: 100%;
+   margin: 0 auto;
+   font-family: "Arial Narrow",Arial,sans-serif;
+   background-image: url(background.jpg);
+}
+
+
+
+header {
+    background-color: white;
+    background-image: url(headerpic.png);
+    border: 2px solid black;
+    padding-left: 15%;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 999;
+    
+
+    
+
+}
+
+header h1 {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size: 55px;
+    
+}
+
+.main {
+    margin: 0% 15% 0% 15%;
+    
+    position: relative;
+}
+
+.main h2 {
+    padding-top: 15%;
+}
+
+p {
+    font-size: 18px;
+}
+
+button {
+    font-size: 17px;
+    border-radius: 6px;
+    background-color: silver;
+    border: 2px solid black;
+    padding: 0px 20px 3px 20px;
+}
+
+input {
+    border: 2px solid black;
+}
+
+.blog-post {
+    border: 2px solid black;
+    margin: 0;
+    background-color: white;
+    
+   
+}
+
+.blog-post p {
+position: relative;
+padding: 0 8 0 8;
+
+}
+
+.blog-post h1 {
+position: relative;
+padding: 0 8 0 8;
+margin: 0px 0px;
+}
+
+.input-article p {
+    position: relative;
+    padding: 0 8 0 8;
+   
+    }
+
+.input-article {
+    border: 2px solid black;
+    margin: 0px;
+    background-color: white;
+
+}
+
+h4 {
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
