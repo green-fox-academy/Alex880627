@@ -1,6 +1,6 @@
 'use strict';
-let num1 = 13;
-let num2 = 22;
+let num1:number = 13;
+let num2:number = 22;
 
 function littleMath() {
     console.log(num1 + num2);
