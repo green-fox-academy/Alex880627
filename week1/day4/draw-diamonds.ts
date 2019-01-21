@@ -16,11 +16,11 @@
 
 // this counts the breakingpoint
 
-let lineCount: number = 9;
+let lineCount: number = 17;
 let breakPoint: number;
 
 if (lineCount % 2 === 1) {
-    breakPoint = (lineCount - 1) / 2;
+    breakPoint = ((lineCount - 1) / 2) + 1;
 }
 else { breakPoint = (lineCount / 2) }
 
@@ -59,7 +59,7 @@ for (let i: number = breakPoint; i >= 0; i--) {
         row2 += ' ';
     }
 
-    for (let j: number = 1; j <= (i * 2) + 1 - (2*oddOreven); j++) {
+    for (let j: number = 1; j <= ((i * 2) + 1) - (2 * oddOreven); j++) {
         row2 += '*';
     }
 
