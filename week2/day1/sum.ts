@@ -12,4 +12,4 @@ function sum(tillNum:number){
  return result;
 }
 
-console.log(sum(10));
+console.log(sum(65));
