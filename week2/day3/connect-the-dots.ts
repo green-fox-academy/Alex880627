@@ -12,23 +12,41 @@ const ctx = canvas.getContext('2d');
 // Connect these: [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70],
 // [120, 100], [85, 130], [50, 100]]
 
-let box:number[][] = [[10, 10], [290,  10], [290, 290], [10, 290]]
+let fox: number[][] = [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70],
+[120, 100], [85, 130], [50, 100]];
+let box: number[][] = [[10, 10], [290, 10], [290, 290], [10, 290]];
 
-function connect(toConnect:number[][]){
+function connect(toConnect: number[][]) {
 
-    ctx.beginPath();
-    
+
     for (let i = 0; i < toConnect.length; i++) {
-        ctx.moveTo(toConnect[i][i],toConnect[i][i+1]);
-        ctx.lineTo(toConnect[i+1][i],toConnect[i+1][i+1]);
-    ctx.strokeStyle = 'green';
-    ctx.stroke();
-    }
-    
-    
 
-    
+        if (i === toConnect.length - 1) {
+            ctx.beginPath();
+            ctx.moveTo(toConnect[i][0], toConnect[i][1]);
+            ctx.lineTo(toConnect[0][0], toConnect[0][1]);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'green';
+            ctx.stroke();
+        } else {
+
+
+            ctx.beginPath();
+            ctx.moveTo(toConnect[i][0], toConnect[i][1]);
+            ctx.lineTo(toConnect[i + 1][0], toConnect[i + 1][1]);
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'green';
+            ctx.stroke();
+
+        }
+    }
 
 }
 
+
+
+connect(fox);
 connect(box);
+
+
+
