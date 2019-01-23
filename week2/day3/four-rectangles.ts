@@ -12,9 +12,6 @@ const ctx = canvas.getContext('2d');
 function drawRect(){
 
 
-
-
-
 for (let index = 0; index < 4; index++) {
 
     let rectxMax:number = Math.floor((Math.random())*150)
@@ -32,7 +29,6 @@ let rectyMax:number = Math.floor((Math.random())*150);
     
     
 }
-
 
 }
 
