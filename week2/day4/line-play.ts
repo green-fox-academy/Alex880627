@@ -23,7 +23,7 @@ let heightStartY: number = 0;
 function draw(){
     
 
-    for (let i = 0; i < lines; i++) {
+    for (let i:number = 0; i < lines; i++) {
         ctx.beginPath();
         ctx.moveTo(heightStartX, heightStartY);
         ctx.lineTo(canvasSizeX, widthStartY);
@@ -43,7 +43,7 @@ function draw(){
     widthStartY = 0; 
     
 
-    for (let i = 0; i < lines; i++) {
+    for (let i:number = 0; i < lines; i++) {
         ctx.beginPath();
         ctx.moveTo(heightStartX, heightStartY);
         ctx.lineTo(widthStartX, canvasSizeY);

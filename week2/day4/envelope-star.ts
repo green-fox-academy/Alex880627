@@ -11,7 +11,7 @@ const ctx = canvas.getContext('2d');
 // Fill the canvas with lines from the edges, every 20 px, to the center.
 
 
-let lines: number = 50;
+let lines: number = 13;
 let canvasSizeX: number = canvas.width/2;
 let canvasSizeY: number = canvas.height/2;
 let altCanvasStartX: number = 0;
@@ -21,7 +21,7 @@ let canvasStartY: number = 300;
 
 function drawLine() {
     
-    for (let i = 0; i < lines; i++) {
+    for (let i:number = 0; i < lines; i++) {
         ctx.beginPath();
         ctx.moveTo(canvasStartXvar, canvasStartY);
         ctx.lineTo(canvasSizeX, altCanvasStartYvar);
@@ -42,7 +42,7 @@ function drawLine() {
 
 
 
-    for (let i = 0; i < lines; i++) {
+    for (let i:number = 0; i < lines; i++) {
         ctx.beginPath();
         ctx.moveTo(canvasStartXvar, canvasStartY);
         ctx.lineTo(altCanvasStartX, canvasSizeY);
@@ -69,7 +69,7 @@ canvasStartY = 300;
 
 function drawLine2() {
     
-    for (let i = 0; i < lines; i++) {
+    for (let i:number = 0; i < lines; i++) {
         ctx.beginPath();
         ctx.moveTo(altCanvasStartX + canvasSizeY/lines, canvasSizeY);
         ctx.lineTo(canvasSizeX, canvasStartY);
@@ -91,7 +91,7 @@ function drawLine2() {
 
 
 
-    for (let i = 0; i < lines; i++) {
+    for (let i:number = 0; i < lines; i++) {
         ctx.beginPath();
         ctx.moveTo(canvasStartXvar, altCanvasStartYvar);
         ctx.lineTo(altCanvasStartX, canvasSizeY);
