@@ -10,7 +10,7 @@ const ctx = canvas.getContext('2d');
 // and draws a line from that point to the center of the canvas.
 // Fill the canvas with lines from the edges, every 20 px, to the center.
 
-let lineCount: number = 18;
+let lineCount: number = 20;
 let maxWidth: number = 600;
 let oneTriangleSide: number = maxWidth / lineCount;
 let oneTriangleHeight: number = Math.sqrt((oneTriangleSide) * (oneTriangleSide) - (oneTriangleSide / 2) * (oneTriangleSide / 2));
@@ -24,24 +24,22 @@ function drawTri(x1: number, y1: number) {
     ctx.stroke();
 
 }
+let xVertical: number = -30;
+let yVertical: number = 600;
 
 function drawBigTri() {
 
-    let xVertical: number = 0;
-    let yVertical: number = 600;
+ 
 
-    for (let a: number = 1; a < lineCount; a++) {
+    for (let a: number = 0; a < lineCount; a++) {
         setTimeout(function () {
             for (let i: number = lineCount - 1 * a; i > 0; i--) {
                 drawTri(xVertical + i * oneTriangleSide, yVertical);
             }
-            yVertical = yVertical - oneTriangleHeight;
-            xVertical = xVertical + 0.5 * oneTriangleSide;
-
+        yVertical = yVertical - oneTriangleHeight;
+        xVertical = xVertical + 0.5 * oneTriangleSide;
         }, a * 600)
     }
-
-
 }
 
 drawBigTri();

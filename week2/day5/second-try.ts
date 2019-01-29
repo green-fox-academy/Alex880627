@@ -10,9 +10,9 @@ const ctx = canvas.getContext('2d');
 // and draws a line from that point to the center of the canvas.
 // Fill the canvas with lines from the edges, every 20 px, to the center.
 
-let separate = 10;
+let separate = 20;
 let maxWidth: number = 600 / separate;
-let lineCount: number = 50;
+let lineCount: number = 30;
 let zero = 0;
 let x1: number = 0;
 let x2: number = maxWidth;
@@ -60,6 +60,5 @@ for (let a: number = 0; a < separate; a++) {
   y2 = maxWidth;
 
 }
-
 
 

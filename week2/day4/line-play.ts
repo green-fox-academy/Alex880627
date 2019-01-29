@@ -10,52 +10,41 @@ const ctx = canvas.getContext('2d');
 // and draws a line from that point to the center of the canvas.
 // Fill the canvas with lines from the edges, every 20 px, to the center.
 
+let separate = 1;
+let maxWidth: number = 600 / separate;
+let lineCount: number = 30;
+let zero = 0;
+let x1: number = 0;
+let x2: number = maxWidth;
+let y1: number = 0;
+let y2: number = maxWidth;
 
-let lines: number = 13;
-let canvasSizeX: number = canvas.width;
-let canvasSizeY: number = canvas.height;
-let widthStartX: number = 0;
-let widthStartY: number = 0;
-let heightStartX: number = canvasSizeX/lines;
-let heightStartY: number = 0;
-
-
-function draw(){
-    
-
-    for (let i:number = 0; i < lines; i++) {
-        ctx.beginPath();
-        ctx.moveTo(heightStartX, heightStartY);
-        ctx.lineTo(canvasSizeX, widthStartY);
-        ctx.strokeStyle = 'purple';
-        ctx.stroke();
-        
-        heightStartX = heightStartX + canvasSizeX / lines;
-        widthStartY = widthStartY + canvasSizeY / lines;
-
-    }
-
-    heightStartX= 0;
-    heightStartY = canvasSizeX/lines;
-    canvasSizeX = canvas.width;
-    canvasSizeY = canvas.height;
-    widthStartX = 0;
-    widthStartY = 0; 
-    
-
-    for (let i:number = 0; i < lines; i++) {
-        ctx.beginPath();
-        ctx.moveTo(heightStartX, heightStartY);
-        ctx.lineTo(widthStartX, canvasSizeY);
-        ctx.strokeStyle = 'black';
-        ctx.stroke();
-        heightStartY = heightStartY + canvasSizeX / lines;
-        widthStartX = widthStartX + canvasSizeY / lines;
-    }
+function drawTheSide1(x1: number, x2: number, y1: number, y2: number, maxWidth: number) {
+  for (let i = 0; i < lineCount; i++) {
+    ctx.beginPath();
+    ctx.moveTo(x1 + maxWidth / lineCount, y1);
+    ctx.lineTo(x2, y2 - maxWidth);
+    ctx.strokeStyle = 'green';
+    ctx.stroke();
+    x1 = x1 + maxWidth / lineCount;
+    y2 = y2 + maxWidth / lineCount;
+  }
+}
+function drawTheSide2(x1: number, x2: number, y1: number, y2: number, maxWidth: number) {
+  for (let a = 0; a < lineCount; a++) {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1 + maxWidth / lineCount);
+    ctx.lineTo(x2 - maxWidth, y2);
+    ctx.strokeStyle = 'purple';
+    ctx.stroke();
+    y1 = y1 + maxWidth / lineCount;
+    x2 = x2 + maxWidth / lineCount;
+  }
+}
+function mainDrawTheSides(x1: number, x2: number, y1: number, y2: number, maxWidth: number) {
+  drawTheSide1(x1, x2, y1, y2, maxWidth);
+  drawTheSide2(x1, x2, y1, y2, maxWidth);
 }
 
 
-draw();
-
-
-
+mainDrawTheSides(x1,x2,y1,y2,maxWidth);
