@@ -20,7 +20,6 @@ function connect(toConnect: number[][]) {
 
 
     for (let i = 0; i < toConnect.length; i++) {
-
         if (i === toConnect.length - 1) {
             ctx.beginPath();
             ctx.moveTo(toConnect[i][0], toConnect[i][1]);
@@ -29,19 +28,16 @@ function connect(toConnect: number[][]) {
             ctx.strokeStyle = 'green';
             ctx.stroke();
         } else {
-
-
             ctx.beginPath();
             ctx.moveTo(toConnect[i][0], toConnect[i][1]);
             ctx.lineTo(toConnect[i + 1][0], toConnect[i + 1][1]);
             ctx.lineWidth = 2;
             ctx.strokeStyle = 'green';
             ctx.stroke();
-
         }
     }
-
 }
+
 
 
 

@@ -24,7 +24,7 @@ fleet.add(eatThisLunch);
 standTheFuckUp.complete();
 eatThisLunch.complete();
 
-console.log(fleet.print());
+fleet.print();
 
 
 
