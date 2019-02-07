@@ -39,4 +39,3 @@ test('test the output with one element', (t) => {
   t.equal(actual, expected, );
   t.end();
 })
-
