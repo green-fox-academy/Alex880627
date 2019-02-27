@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: CreateElement</title>
+  </head>
+  <body>
+    <ul class="asteroids">
+      <li id="b325" class="asteroid">The King</li>
+      <li class="asteroid b326">The Conceited Man</li>
+    </ul>
+    <div class="container"></div>
+
+    <!-- You can work in the html or in a separate js file. Like:
+    <script>
+      Add an item that says 'The Green Fox' to the asteroid list.
+      Add an item that says 'The Lamplighter' to the asteroid list.
+      Add a heading saying 'I can add elements to the DOM!' to the .container.
+      Add an image, any image, to the container.
+    </script>
+    OR
+    <script src="createelement-1.js"></script> -->
+
+    <script>
+    let newLi = document.createElement('li');
+    document.querySelector('ul').appendChild(newLi);
+    document.getElementsByTagName('li')[2].innerHTML = 'The Green Fox';
+    let newLi1 = document.createElement('li');
+    document.querySelector('ul').appendChild(newLi1);
+    document.getElementsByTagName('li')[3].innerHTML = 'The Lamplighter';
+
+    let newH1 = document.createElement('h1');
+    document.getElementsByClassName('container')[0].appendChild(newH1);
+    document.getElementsByClassName('container')[0].innerHTML = 'I can add elements to the DOM!';
+
+    let newImg = document.createElement('img');
+    let img = document.getElementsByClassName('container')[0].appendChild(newImg);
+    img.src = 'https://media.giphy.com/media/l3q2yYNt8DXoyKRdm/giphy.gif';
+    </script>
+
+  </body>
+</html>
