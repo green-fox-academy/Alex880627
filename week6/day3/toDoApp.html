@@ -19,6 +19,31 @@
         - If ">" is clicked the selected item should be moved to the right side and the first item on the left side should be selected
     5, Check all the edge cases, no error should be printed to the console
    -->
-  <script type="text/javascript" src="main.js"></script>
+ <script>
+
+ let div1 = document.createElement('div');
+ let boxList = document.createElement('ul');
+ document.querySelector('body').appendChild(div1);
+ document.querySelector('div').appendChild(boxList);
+
+
+ for (let i = 0; i < 4; i++) {  
+   let listItem = document.createElement('li');
+   document.querySelector('ul').appendChild(listItem).style = 'list-style-type:none';
+ }
+ document.querySelectorAll('li')[0].innerHTML = 'shit';
+ document.querySelectorAll('li')[1].innerHTML = 'shit';
+ document.querySelectorAll('li')[2].innerHTML = 'shit';
+ document.querySelectorAll('li')[3].innerHTML = 'shit';
+
+ let buttonUp = document.createElement('button');
+ document.querySelector('div').appendChild(buttonUp);
+ buttonUp.innerHTML = 'Up';
+ let buttonDown = document.createElement('button');
+ document.querySelector('div').appendChild(buttonDown);
+ buttonDown.innerHTML = 'Down';
+ 
+ 
+ </script>
 </body>
 </html>
