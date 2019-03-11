@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="showScroll"></p>
     <script>
       function getRandomColor() {
         var letters = "0123456789ABCDEF";
@@ -17,15 +18,37 @@
         return color;
       }
       let scrollThreshold = 50;
-      let body = document.getElementsByTagName("body")[0];
-      for (let i = 0; i < Math.floor(Math.random() * 100)+50; i++) {
-        let color = getRandomColor();
-        let div = document.createElement("div");
-        div.setAttribute(`style`, `background-color:${color}`);
-        body.appendChild(div);
+
+      function appendItems(newItemNumber = 0) {
+        let body = document.getElementsByTagName("body")[0];
+        let random = Math.floor(Math.random() * 10) + 50;
+        if (newItemNumber === 0) {
+          newItemNumber = random;
+        }
+        for (let i = 0; i < newItemNumber; i++) {
+          let color = getRandomColor();
+          let div = document.createElement("div");
+          div.setAttribute(`style`, `background-color:${color}`);
+          body.appendChild(div);
+        }
+        return newItemNumber;
       }
 
+      let appendedItems = appendItems(30);
 
+      window.addEventListener("scroll", function() {
+        let counter = Math.floor(pageYOffset/200);
+        document.getElementById("showScroll").innerHTML = counter;
+        if (counter > appendedItems*0.88) {
+            counter = counter -10;
+            appendItems(10);
+
+        }
+        console.log(counter);
+        console.log(appendedItems);
+        
+        
+      });
     </script>
   </body>
 </html>
