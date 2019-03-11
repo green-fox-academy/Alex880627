@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Create a simple HTML document with one button.
+    If the user clicks the button 3 times, and 5 seconds is already elapsed since 
+    the page is loaded, a text should appear under the button:
+    5 seconds elapsed and clicked 3 times
+    If the user starts clicking before the first 5 seconds, nothing should be printed -->
+    <button>Click me 3x</button>
+
+    <script>
+      let button = document.getElementsByTagName("button")[0];
+      let body = document.getElementsByTagName("body")[0];
+      let counter = 0;
+
+      function trigger() {
+        counter += 1;
+        if (counter === 2) {
+          button.addEventListener("click", () => {
+            let p = document.createElement("p");
+            p.innerText = "2 seconds elapsed and clicked 3x";
+            body.appendChild(p);
+          });
+        }
+      }
+      function loadMessage() {
+        button.addEventListener("click", trigger
+        );
+      }
+      setTimeout(loadMessage, 2000);
+    </script>
+  </body>
+</html>

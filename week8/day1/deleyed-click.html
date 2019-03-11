@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+    <!-- Delayed Click
+    Create a simple HTML document with one button. If the user clicks the button 
+    it should wait 2 seconds and it should show a text under the button: 2 seconds ellapsed -->
+
+    <button>Click me</button>
+ 
+    <script>
+    let button = document.getElementsByTagName('button')[0];
+    let body = document.getElementsByTagName('body')[0];
+
+    function wait(){
+      setTimeout(()=>{
+        let p = document.createElement('p');
+        p.innerText = 'two seconds elapsed';
+        body.appendChild(p);
+      },2000)
+    }
+
+    button.addEventListener('click', wait)
+    
+    </script>
+
+</body>
+</html>
+
+
+
+
