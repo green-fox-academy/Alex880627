@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+}
+
+.wrapper {
+  background-color: rgb(57, 57, 245);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+table {
+  font-size: 20px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  border-collapse: collapse;
+}
+
+td,th {
+  border: 1px solid grey;
+  width: 300px;
+  height: 60px;;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgray;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+.money:before {
+  content: "$";
+}
