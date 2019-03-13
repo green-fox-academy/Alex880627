@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="button-disable.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="/send" method="POST">
+        <legend>Animals are fun!</legend>
+        <label for="pet">What is your favourite pet?</label>
+        <label for="dog">Dog</label>
+        <input type="radio" name="state" id="dog" value="dog" />
+        <label for="cat">Cat</label>
+        <input type="radio" name="state" id="cat" value="cat" />
+        <label for="goldfish">Viktor the goldfish</label>
+        <input type="radio" name="state" id="goldfish" value="goldfish" />
+        <label for="facts">Do you want to sign up for cat facts?</label>
+        <label for="sign-up">Yes</label>
+        <input type="radio" name="sign-up" id="yes" value="true" />
+        <label for="sign-up">No</label>
+        <input type="radio" name="sign-up" id="no" value="false" />
+        <input
+          type="submit"
+          name="sign-up-ohne-cat-ish"
+          value="sign up"
+          disabled="true"
+          id="ohne-cat"
+        />
+        <input
+          type="submit"
+          name="sing-up-cat-ish"
+          value="I love cats"
+          disabled="true"
+          id="kit-cat"
+        />
+      </form>
+    </div>
+    <script src="./button-disable.js"></script>
+  </body>
+</html>
