@@ -1,0 +1,132 @@
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  grid-template-rows: repeat(6,1fr);
+  grid-template-areas: 
+  "one two three four five six seven"
+  "eight . . . . . nine"
+  "ten . . . . . eleven"
+  "twelve  . . . . . thirteen"
+  "fourteen  . . . . . fifteen"
+  "sixteen seventeen eightteen nineteen twenty twentyone twentytwo";
+  background-color: green;
+
+}
+
+.container > div {
+  background-color: rgb(187, 76, 95);
+  border-radius: 3px;
+  height: 120px;
+  border: 1px solid black;
+}
+
+.one {
+  grid-area: one;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;   
+  font-weight: bold;
+  color: white;
+}
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.ten {
+  grid-area: ten;
+}
+
+.eleven {
+  grid-area: eleven;
+}
+
+.twelve {
+  grid-area: twelve;
+}
+
+.thirteen {
+  grid-area: thirteen;
+}
+
+.fourteen {
+  grid-area: fourteen;
+}
+
+.fifteen {
+  grid-area: fifteen;
+}
+
+.sixteen {
+  grid-area: sixteen;
+}
+
+.seventeen {
+  grid-area: seventeen;
+}
+
+.eightteen {
+  grid-area: eightteen;
+}
+
+.nineteen {
+  grid-area: nineteen;
+}
+
+.twenty {
+  grid-area: twenty;
+}
+.twentyone {
+  grid-area: twentyone;
+}
+.twentytwo {
+  grid-area: twentytwo;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;   
+  font-weight: bold;
+  color: white;
+}
+
+#cards {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: aquamarine;
+  top: 33%;
+  left: 55%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 250px;   
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
+}
