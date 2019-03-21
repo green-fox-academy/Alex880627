@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+  form > label,input {
+    display: flex;
+    
+  }
+
+  #form {
+    background-color: aqua;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  </style>
+</head>
+<body>
+  <div id="content">
+     
+  </div>
+
+  <form id="form">
+    <label for="question">Question</label>
+    <input type="text" name="question" id="question">
+    <label for="answer_1">Answer1</label>
+    <input type="radio" id="answer1-radio" name="radio">
+    <input type="text" name="answer_1" id="answer1">
+    <label for="answer_2">Answer2</label>
+    <input type="radio" id="answer2-radio" name="radio">
+    <input type="text" name="answer_2" id="answer2">
+    <label for="answer_3">Answer3</label>
+    <input type="radio" id="answer3-radio" name="radio">
+    <input type="text" name="answer_3" id="answer3">
+    <label for="answer_4">Answer4</label>
+    <input type="radio" id="answer4-radio" name="radio">
+    <input type="text" name="answer_4" id="answer4">
+    <input type="submit" id="submit">
+  </form>
+
+  <script src="../assets/questions.js"></script>
+</body>
+</html>

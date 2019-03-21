@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  body {
+    display: flex;
+    justify-content: center;
+    height: 650px;
+    align-items: center;
+    flex-direction: column;
+  }
+  #game-wrapper {
+    min-width: 400px;
+    background-color: rgb(70, 115, 199);
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 25px;
+  }
+  #answers-wrapper > div{
+    background-color: white;
+    margin: 2px;
+    border-radius: 3px;
+  }
+
+  #answers-wrapper > div:hover{
+    background-color: rgb(224, 193, 53);
+    margin: 2px;
+    border-radius: 3px;
+  }
+
+  #points {
+    color: rgb(190, 211, 238);
+    font-size: 30px;
+  }
+
+  </style>
+</head>
+<body>
+  
+  <div id="game-wrapper">
+    <div id="points">Score:</div>
+    <div id="question-wrapper"></div>
+    <div id="answers-wrapper">
+      <div class="answers"></div>
+      <div class="answers"></div>
+      <div class="answers"></div>
+      <div class="answers"></div>
+    </div>
+  </div>
+<a href="/questions" id="change-questions">Change Questions</a>
+  <script src="../assets/frontend.js"></script>
+</body>
+</html>
